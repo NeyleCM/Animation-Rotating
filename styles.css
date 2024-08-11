@@ -51,10 +51,21 @@ body {
 }
 
 .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     background-color: #ff7979;
     border-radius: 0 0 1000px 0;
+}
+
+svg {
+    margin: 5px 30px 10px 5px;
+    width:30px;
+    height: 30px;
+    filter: invert(1);
+    cursor: pointer;
 }
 
 main {
@@ -80,6 +91,11 @@ main {
     margin-top: 20px;
 }
 
+.articleTwo h2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
 .articleTwo img {
     width: 100%;
 }
