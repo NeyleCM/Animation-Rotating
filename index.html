@@ -3,35 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles.css">
     <title>Animation Rotating Neyle</title>
 </head>
 <body>
-    <div class="menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
-        </svg>
-    </div>
-    <main>
-        <article class="articleOne">
-            <div class="content">
-                <h1>Amazing Article</h1>
-                <small>Florin Pop</small>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, eaque odio. Fugiat reiciendis,
-                    quaerat ipsa ad sapiente ab vero tenetur, officiis modi rem nobis, natus soluta dolores molestias.
-                    Eligendi, quidem!
+    <section class="containerPrincipal" id="containerPrincipal">
+        <div>
+            <div class="menu">
+                <i class="fas fa-bars" id="open"></i>
+                <i class="fas fa-times" id="close"></i>
+            </div>
+        </div>
+        <main>
+            <article class="articleOne">
+                <div class="content">
+                    <h1>Amazing Article</h1>
+                    <small>Florin Pop</small>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, eaque odio. Fugiat reiciendis,
+                        quaerat ipsa ad sapiente ab vero tenetur, officiis modi rem nobis, natus soluta dolores molestias.
+                        Eligendi, quidem!
+                    </p>
+            </article>
+            <article class="articleTwo">
+                <h2>My Dog</h2>
+                <img src="./img/Dog-animation.avif" alt="Dog">
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure eaque, dolor cumque, facilis quae
+                    suscipit similique fuga temporibus sed laudantium voluptatem aperiam voluptate atque sapiente
+                    officia alias quaerat, sint iste.
                 </p>
-        </article>
-        <article class="articleTwo">
-            <h2>My Dog</h2>
-            <img src="./img/Dog-animation.avif" alt="Dog">
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure eaque, dolor cumque, facilis quae
-                suscipit similique fuga temporibus sed laudantium voluptatem aperiam voluptate atque sapiente
-                officia alias quaerat, sint iste.
-            </p>
-        </article>
-    </div>
-    </main>
+            </article>
+        </div>
+        </main>
+    </section>
+    <nav class="navBar">
+        <ul>
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="">HOME</a>
+        
+            </li>
+            <li>
+                <i class="fa fa-user-alt"></i>
+                <a href="">ABOUT</a>
+            </li>
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
 </body>
 <script src="./script.js"></script>
 </html>

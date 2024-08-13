@@ -45,32 +45,73 @@ table {
 
 /* ---- DESDE AQUÍ ----- */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
+  background-color: #333;
 }
 
+.containerPrincipal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fafafa;
+}
 .menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 0;
     width: 100px;
     height: 100px;
     background-color: #ff7979;
     border-radius: 0 0 1000px 0;
+    position: fixed;
+
 }
 
-svg {
+.containerPrincipal.containerDos .menu {
+    transform: rotate(-70deg);
+}
+.menu.open {
+    left: 60%;
+    top: 0;
+    transform: rotate(0deg);
+    transition: all 0.4s ease-in-out;
+}
+
+.menu.close {
+    left: 0;
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu i {
     margin: 5px 30px 10px 5px;
-    width:30px;
-    height: 30px;
+    width:40px;
+    height: 40px;
     filter: invert(1);
     cursor: pointer;
 }
 
 main {
-    margin: 15px 30px 15px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 15px 30px 15px 30px; */
+    margin: 110px auto;
     line-height: 30px;
+    max-width: 1000px
 }
 
 .articleOne {
@@ -99,3 +140,55 @@ main {
 .articleTwo img {
     width: 100%;
 }
+
+.containerPrincipal.containerDos {
+        transform: rotate(-20deg);
+}
+
+.containerPrincipal.containerDos+nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+.navBar {
+    position: fixed;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+.navBar li {
+    display: flex;
+    margin-left: 10px;
+    cursor: pointer;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+ .navBar li+li {
+    margin-left: 20px;
+    transform: translateX(-150%);
+ }
+
+ .navBar li+li+li  {
+    margin-left: 30px;
+    transform: translateX(-200%);
+ }
+
+
+.navBar li i {
+    filter: invert(1);
+    width: 45px;
+    height: 45px;
+}
+.navBar a {
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navBar a:hover {
+    color: #ff7979;
+    transition: all .5s ease;
+}
+
