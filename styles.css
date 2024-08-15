@@ -74,31 +74,41 @@ body {
     background-color: #ff7979;
     border-radius: 0 0 1000px 0;
     position: fixed;
-
-}
-
-.containerPrincipal.containerDos .menu {
-    transform: rotate(-70deg);
-}
-.menu.open {
-    left: 60%;
-    top: 0;
-    transform: rotate(0deg);
-    transition: all 0.4s ease-in-out;
-}
-
-.menu.close {
     left: 0;
-    top: 60%;
-    transform: rotate(90deg);
+    top: 0;
     transform-origin: top left;
     transition: all 0.4s ease-in-out;
 }
 
+.containerPrincipal.containerDos {
+    transform: rotate(-20deg);
+    transform-origin: top left; /* Ajusta la rotación desde la esquina superior izquierda */
+    margin-top: 50px;
+    margin-left: -30px; 
+    transition: transform .5s ease-in-out;
+}
+
+#close {
+    display: none; /* Inicialmente oculto */
+}  
+
+/* Cuando el contenedor principal rota (se activa el menú) */
+.containerPrincipal.containerDos .menu {
+    transform: rotate(0deg);
+} 
+
+/* Estado del menú al estar abierto */
+/* Si el contenedor principal está en estado rotado, cambiamos los íconos */
+.containerPrincipal.containerDos #open {
+    display: none;
+}
+
+.containerPrincipal.containerDos #close {
+    display: block;
+}
+
 .menu i {
-    margin: 5px 30px 10px 5px;
-    width:40px;
-    height: 40px;
+    margin: 5px 20px 15px 5px;
     filter: invert(1);
     cursor: pointer;
 }
@@ -141,16 +151,11 @@ main {
     width: 100%;
 }
 
-.containerPrincipal.containerDos {
-        transform: rotate(-20deg);
-}
-
 .containerPrincipal.containerDos+nav li {
     transform: translateX(0);
     transition-delay: 0.3s;
-}
+} 
 .navBar {
-    position: fixed;
     position: fixed;
     bottom: 40px;
     left: 0;
@@ -173,7 +178,6 @@ main {
     margin-left: 30px;
     transform: translateX(-200%);
  }
-
 
 .navBar li i {
     filter: invert(1);
